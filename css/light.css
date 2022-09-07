@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: 0.8s all; */
+    --color_back:black;
+}
+body{
+  background-color: rgba(57, 208, 210, 0.9);
+  transition: all 0.8s;
+}
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+    min-width:350px;
+    justify-content: center;
+    align-items: center;
+}
+.Container>div{
+    width:355px;
+    margin-bottom: 5px;
+}
+.sec1-icon{
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    width: 84px;
+}
+.sec1-icon img{
+    width:30px;
+}
+#Heading{
+    display:flex;
+    justify-content: space-between;
+    color: white;
+    
+}
+#Heading h2{
+    font-size: 2.5rem;
+    justify-self:flex-start;
+}
+.keypad{
+    display: flex;
+    justify-content:space-around ;
+}
+.keypad >div {
+    margin: 2px 0px;
+}
+
+input[type="button"],button{
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 2px;
+    width: 85px;
+    height: 60px;
+    border-radius: 100%;
+    margin: 3px 0px;
+    border:none;
+    background-color: white;
+    outline:none;
+    cursor: pointer;
+}
+input[type="button"]:hover,button:hover span,button:hover{
+    background-color: rgb(11, 112, 105);
+    color: white;
+}
+input[value="="]{
+    background-color: red;
+
+}
+input[value="="]:hover{
+    background-color: rgb(228, 100, 100);
+}
+input[type="text"]{
+    background-color: rgb(203, 226, 228);
+    border: none;
+    min-width: 350px;
+    min-height: 50px;
+    padding:20px 15px;
+    border-radius:100px;
+    color: black;
+    outline: none;
+    font-size: 1.5rem;
+}
+input[type="text"]::placeholder{
+    color:black;
+}
+button span{
+    display: inline-block;
+    transform: rotate(135deg);
+}
+.col{
+    width:min-content
+}
+
+/* #hidden{
+  display: none;
+}
+#unhidden{
+    transition: 0.8s all;
+} */
+
+
+#hidden-row{
+    height: 0px;
+    overflow: hidden;
+}
+#hidden-col{
+    width: 0px;
+    overflow: hidden;
+}
+#hidden-col input[type='button']{
+    width: 0px;
+}

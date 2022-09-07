@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" id="theme" href="/css/light.css">
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="Container">
+            <div id="Heading">
+                <h2 id="name" value="light">Calculator</h2>
+                <div class="sec1-icon">
+                    <a href="#"><img id="Github-icon" src="/img/GitHubLight.svg" alt="Github-icon"></a>
+                    <a href="#" onclick="changeTheme()"><img id="theme-icon" src="/img/MoonIcon.svg" alt="mode-icon"></a>
+                </div>
+            </div>
+            <div id="section-1">
+                <input type="text" name="Result" id="Result" placeholder="Result" readonly>
+            </div>
+            <div class="keypad">
+                <div class="left-col">
+                    <div id="hidden-row">
+                        <input type="button" value="(" onclick="display('(',2)">
+                        <input type="button" value=")" onclick="display(')',2)">
+                        <input type="button" value="√x" onclick="squRoot()">
+                    </div>
+                    <div id="unhidden-row">
+                        <div id="section-2">
+                            <input type="button" value="AC" onclick="allClear()">
+                            <input type="button" value="C" onclick="backspace()">
+                            <input type="button" value='^' onclick="display('^',1)">
+
+                        </div>
+                        <div id="section-3">
+                            <input type="button" value="7" onclick="display('7',0)">
+                            <input type="button" value="8" onclick="display('8',0)">
+                            <input type="button" value="9" onclick="display('9',0)">
+
+                        </div>
+                        <div id="section-4">
+                            <input type="button" value="4" onclick="display('4',0)">
+                            <input type="button" value="5" onclick="display('5',0)">
+                            <input type="button" value="6" onclick="display('6',0)">
+
+                        </div>
+                        <div id="section-5">
+                            <input type="button" value="1" onclick="display('1',0)">
+                            <input type="button" value="2" onclick="display('2',0)">
+                            <input type="button" value="3" onclick="display('3',0)">
+
+                        </div>
+                        <div id="section-6">
+                            <button id="expand-btn" value="< >" onclick="DisplayHidden()"><span>
+                                    <>
+                                </span></button>
+                            <input type="button" value="0" onclick="display('0'),0">
+                            <input type="button" value="." onclick="display('.'),0">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="hidden-col" class="col">
+                    <input type="button" value="1/x" onclick="onedivided()">
+                    <input type="button" value="n!" onclick="factorial()">
+                    <input type="button" value="sin" onclick="angle('sin')">
+                    <input type="button" value="cos" onclick="angle('cos')">
+                    <input type="button" value="tan" onclick="angle('tan')">
+                    <input type="button" value="00" onclick="display('00',0)">
+                </div>
+                <div id="right-col" class="col">
+                    <input type="button" value="÷" onclick="display('÷',1)">
+                    <input type="button" value="×" onclick="display('×',1)">
+                    <input type="button" value="-" onclick="display('-',1)">
+                    <input type="button" value="+" onclick="display('+',1)">
+                    <input type="button" value="=" onclick="cal()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>
